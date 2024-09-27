@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+initial-scale=1.0"
+    />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="logo">
+        <img id="logo-img" src="logo.jpg" alt="Logo" />
+        <span>Skycast</span>
+      </div>
+      <div class="search-container">
+        <input type="text" id="city" placeholder="Search city..." />
+        <button onclick="getWeather()">Search</button>
+      </div>
+    </div>
+    <div id="weather-container">
+      <img id="weather-icon" alt="Weather-Icon" />
+      <div id="temp-div"></div>
+      <div id="weather-info"></div>
+      <div id="hourly-forecast"></div>
+    </div>
+    <script src="index.js"></script>
+    <script>
+      window.onload = function () {
+        getLocationAndWeather();
+      };
+    </script>
+  </body>
+</html>
